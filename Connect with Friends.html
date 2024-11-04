@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon</title>
+    <title>Connect with Friends:</title>
     <link rel="icon" href="favicon.ico" />
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
-      <h1>GETUP<sup>&reg;</sup></h1>
+      <h1>Connect with Friends:</h1>
 
       <!-- Navigation elements -->
       <nav>
@@ -26,83 +26,52 @@
       </nav>
 
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
-    </header>
 
-    <main>
-      <div class="players">
-        Player:
-        <span class="player-name">Mystery player</span>
-      </div>
-      <ul class="notification">
-        <li class="player-name">Tim started a new game</li>
-        <li class="player-name">Ada started a new game</li>
-        <li class="player-name">Tim scored 337</li>
-      </ul>
-
-      <!-- More formatting with old style HTML -->
-      <br />
-
+      <head>
+      <h1>Message Friends</h1>
+      <p>Select Friend:</p>
+      <select id="friend-select">
+        <option value="friend1">Friend 1</option>
+        <option value="friend2">Friend 2</option>
+        <option value="friend3">Friend 3</option>
+        </select>
+      </head>
       <div>
-        <label for="count">Score</label>
-        <input type="text" id="count" value="--" readonly />
       </div>
+      <body>
+        <textarea id="message-box" placeholder="Type your message here"></textarea>
+        <button onclick="sendMessage()">Send</button>
+      
+        <script>
+          function sendMessage() {
+            const message = document.getElementById('message-box').value;
+            // Here, you would typically send the message using JavaScript's fetch API or other methods to communicate with a server or messaging service.
+            // For a simple demo, you can display the message on the page:
+            alert('You sent: ' + message);
+          }
+        </script>
 
-      <br />
+<div class="today-selfies">
+  <h2>Today's Selfies</h2>
+  <div class="selfie-card">
+    <img src="user1_selfie.jpg" alt="User 1 Selfie">
+    <p><strong>User 1</strong></p>
+    <p>Woke up at: 7:30 AM</p>
+    <p>Streak: 5 days</p>
+  </div>
+  <div class="selfie-card">
+    <img src="user2_selfie.jpg" alt="User 2 Selfie">
+    <p><strong>User 2</strong></p>
+    <p>Woke up at: 6:45 AM</p>
+    <p>Streak: 12 days</p>
+  </div>
+  </div>
 
-      <div>
-        <button>Reset</button>
-      </div>
-
-      <br />
-
-      <div>
-        <table>
-          <tr>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <!-- SVG
-                    M move <to x,y>
-                    Q quadratic curve <control point x,y> <to x,y>
-                -->
-                  <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <path d="M5,5 5,95 95,95 Q 95,5 5,5" fill="red" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <path d="M5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <path d="M95,5 5,5 5,95 Q 95,95 95,5" fill="yellow" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </main>
-
-    <footer>
-      <hr />
-      <span class="text-reset">Author Name(s)</span>
-      <br />
-      <a href="https://github.com/webprogramming260/simon-html">GitHub</a>
-    </footer>
-  </body>
+  <footer>
+    <hr />
+    <span class="text-reset">Author: Abigail Preece</span>
+    <br />
+    <a href="https://github.com/apreece1/startup.git">GitHub</a>
+  </footer>
+</body>
 </html>

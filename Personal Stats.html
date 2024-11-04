@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon</title>
+    <title>Daily Motivation</title>
     <link rel="icon" href="favicon.ico" />
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
-      <h1>Simon<sup>&reg;</sup></h1>
+      <h1>Personal Stats:</h1>
 
       <!-- Navigation elements -->
       <nav>
@@ -30,79 +30,198 @@
     </header>
 
     <main>
-      <div class="players">
-        Player:
-        <span class="player-name">Mystery player</span>
-      </div>
-      <ul class="notification">
-        <li class="player-name">Tim started a new game</li>
-        <li class="player-name">Ada started a new game</li>
-        <li class="player-name">Tim scored 337</li>
-      </ul>
-
-      <!-- More formatting with old style HTML -->
-      <br />
-
-      <div>
-        <label for="count">Score</label>
-        <input type="text" id="count" value="--" readonly />
+      <div class="Graphs">
+        <h1>Daily Tracker:</h1>
       </div>
 
-      <br />
+      <head>
+        <title>Wake-Up Calendar</title>
+        <link rel="stylesheet" href="style.css">
 
-      <div>
-        <button>Reset</button>
-      </div>
+        <!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar</title>
+  <style>
+    .calendar-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-      <br />
+    .calendar-table th, .calendar-table td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
 
-      <div>
-        <table>
-          <tr>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <!-- SVG
-                    M move <to x,y>
-                    Q quadratic curve <control point x,y> <to x,y>
-                -->
-                  <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <path d="M5,5 5,95 95,95 Q 95,5 5,5" fill="red" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <path d="M5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg aria-hidden="true" viewBox="0 0 100 100" height="100" width="100">
-                  <path d="M95,5 5,5 5,95 Q 95,95 95,5" fill="yellow" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </main>
+    .calendar-button {
+      background-color: white;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
 
-    <footer>
-      <hr />
-      <span class="text-reset">Author Name(s)</span>
-      <br />
-      <a href="https://github.com/webprogramming260/simon-html">GitHub</a>
-    </footer>
-  </body>
+    .calendar-button.active {
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <table class="calendar-table">
+    <tr>
+      <td><button class="calendar-button">1</button></td>
+      <td><button class="calendar-button">2</button></td>
+      <td><button class="calendar-button">3</button></td>
+      <td><button class="calendar-button">4</button></td>
+      <td><button class="calendar-button">5</button></td>
+      <td><button class="calendar-button">6</button></td>
+      <td><button class="calendar-button">7</button></td>
+    </tr>
+    <tr>
+      <td><button class="calendar-button">8</button></td>
+      <td><button class="calendar-button">9</button></td>
+      <td><button class="calendar-button">10</button></td>
+      <td><button class="calendar-button">11</button></td>
+      <td><button class="calendar-button">12</button></td>
+      <td><button class="calendar-button">13</button></td>
+      <td><button class="calendar-button">14</button></td>
+    </tr>
+    <tr>
+      <td><button class="calendar-button">15</button></td>
+      <td><button class="calendar-button">16</button></td>
+      <td><button class="calendar-button">17</button></td>
+      <td><button class="calendar-button">18</button></td>
+      <td><button class="calendar-button">19</button></td>
+      <td><button class="calendar-button">20</button></td>
+      <td><button class="calendar-button">21</button></td>
+    </tr>
+    <tr>
+      <td><button class="calendar-button">22</button></td>
+      <td><button class="calendar-button">23</button></td>
+      <td><button class="calendar-button">24</button></td>
+      <td><button class="calendar-button">25</button></td>
+      <td><button class="calendar-button">26</button></td>
+      <td><button class="calendar-button">27</button></td>
+      <td><button class="calendar-button">28</button></td>
+    </tr>
+    <tr>
+      <td><button class="calendar-button">29</button></td>
+      <td><button class="calendar-button">30</button></td>
+      <td><button class="calendar-button">31</button></td>
+    </tr>
+    </table>
+  <script>
+    const buttons = document.querySelectorAll('.calendar-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+
+<head>
+  <title>Simple Calendar</title>
+  <style>
+    .calendar-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .calendar-table th, .calendar-table td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .calendar-button {
+      background-color: white;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .calendar-button.active {
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <table class="calendar-table">
+    </table>
+
+  <div>
+    <p>Number of Days up on Time: <span id="active-days">0</span></p>
+  </div>
+
+  <h1>Trends:</h1>
+  <div>
+  </div>
+  <img src="https://cdn.kastatic.org/ka-perseus-graphie/f36c21e12d10a7f10b7a6a2f9fd7bfa8b53442ec.svg" alt="Image from a link">
+  <div>
+  </div>
+
+  <h2>Progress to Goal</h2>
+  <style>
+    .progress-bar {
+      width: 300px;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #4CAF50;
+      width: 0%; /* Initially, the bar is empty */
+    }
+  </style>
+
+  <div class="progress-bar">
+    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+  </div>
+
+  <script>
+    // Set the goal and current progress
+    const goal = 100;
+    const currentProgress = 50;
+
+    // Calculate the percentage of progress
+    const percentage = (currentProgress / goal) * 100;
+
+    // Set the width of the progress bar
+    document.getElementById("progress-bar-fill").style.width = percentage + "%";
+  </script>
+
+<p>Rewards: </p>
+<div class="trophy-case">
+  <img src="trophy.png" alt="Trophy 1">
+  <img src="trophy.png" alt="Trophy 2">
+  <img src="trophy.png" alt="Trophy 3">
+  </div>
+
+  <footer>
+    <hr />
+    <span class="text-reset">Author: Abigail Preece</span>
+    <br />
+    <a href="https://github.com/apreece1/startup.git">GitHub</a>
+  </footer>
+</body>
 </html>
+
