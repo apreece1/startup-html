@@ -2,226 +2,155 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daily Motivation</title>
+    <title>Personal Stats</title>
     <link rel="icon" href="favicon.ico" />
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
       <h1>Personal Stats:</h1>
 
-      <!-- Navigation elements -->
       <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
         <menu>
           <li><a href="index.html">Home</a></li>
           <li><a href="Alarms.html">Alarms</a></li>
-          <li><a href="Daily Motivation.html">Daily  Motivation</a></li>
+          <li><a href="Daily Motivation.html">Daily Motivation</a></li>
           <li><a href="Personal Stats.html">Personal Stats</a></li>
           <li><a href="Connect with Friends.html">Connect with Friends</a></li>
           <li><a href="about.html">About</a></li>
         </menu>
       </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
       <hr />
     </header>
 
     <main>
+            <!-- Month Selector -->
+            <div class="month-selector">
+              <label for="month">Choose a month:</label>
+              <select id="month" name="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+            </div>
+      
+            <div id="month-display">
+              <p>Selected Month: <span id="selected-month">January</span></p>
+            </div>
+      
+            <script>
+              // Get reference to the select dropdown and the display area
+              const monthSelect = document.getElementById("month");
+              const monthDisplay = document.getElementById("selected-month");
+      
+              // Event listener to update the displayed month whenever the user selects a new one
+              monthSelect.addEventListener("change", function () {
+                const selectedMonth = monthSelect.value;
+                monthDisplay.textContent = selectedMonth;
+              });
+
+      </script>
+            
       <div class="Graphs">
         <h1>Daily Tracker:</h1>
       </div>
 
-      <head>
-        <title>Wake-Up Calendar</title>
-        <link rel="stylesheet" href="style.css">
+      <div class="calendar">
+        <table class="calendar-table">
+          <tr>
+            <td><button class="calendar-button">1</button></td>
+            <td><button class="calendar-button">2</button></td>
+            <td><button class="calendar-button">3</button></td>
+            <td><button class="calendar-button">4</button></td>
+            <td><button class="calendar-button">5</button></td>
+            <td><button class="calendar-button">6</button></td>
+            <td><button class="calendar-button">7</button></td>
+          </tr>
+          <tr>
+            <td><button class="calendar-button">8</button></td>
+            <td><button class="calendar-button">9</button></td>
+            <td><button class="calendar-button">10</button></td>
+            <td><button class="calendar-button">11</button></td>
+            <td><button class="calendar-button">12</button></td>
+            <td><button class="calendar-button">13</button></td>
+            <td><button class="calendar-button">14</button></td>
+          </tr>
+          <tr>
+            <td><button class="calendar-button">15</button></td>
+            <td><button class="calendar-button">16</button></td>
+            <td><button class="calendar-button">17</button></td>
+            <td><button class="calendar-button">18</button></td>
+            <td><button class="calendar-button">19</button></td>
+            <td><button class="calendar-button">20</button></td>
+            <td><button class="calendar-button">21</button></td>
+          </tr>
+          <tr>
+            <td><button class="calendar-button">22</button></td>
+            <td><button class="calendar-button">23</button></td>
+            <td><button class="calendar-button">24</button></td>
+            <td><button class="calendar-button">25</button></td>
+            <td><button class="calendar-button">26</button></td>
+            <td><button class="calendar-button">27</button></td>
+            <td><button class="calendar-button">28</button></td>
+          </tr>
+          <tr>
+            <td><button class="calendar-button">29</button></td>
+            <td><button class="calendar-button">30</button></td>
+            <td><button class="calendar-button">31</button></td>
+          </tr>
+          <!-- More rows for calendar buttons -->
+        </table>
+        <p>Number of Days up on Time: <span id="active-days">0</span></p>
+      </div>
 
-        <!DOCTYPE html>
-<html>
-<head>
-  <title>Calendar</title>
-  <style>
-    .calendar-table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+      <h1>Trends:</h1>
+      <img src="https://cdn.kastatic.org/ka-perseus-graphie/f36c21e12d10a7f10b7a6a2f9fd7bfa8b53442ec.svg" alt="Graph Image">
 
-    .calendar-table th, .calendar-table td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: center;
-    }
+      <h2>Progress to Goal</h2>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
 
-    .calendar-button {
-      background-color: white;
-      border: none;
-      color: black;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
+      <p>Rewards:</p>
+      <div class="trophy-case">
+        <img src="trophy.png" alt="Trophy 1">
+        <img src="trophy.png" alt="Trophy 2">
+        <img src="trophy.png" alt="Trophy 3">
+      </div>
+    </main>
 
-    .calendar-button.active {
-      background-color: green;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-  <table class="calendar-table">
-    <tr>
-      <td><button class="calendar-button">1</button></td>
-      <td><button class="calendar-button">2</button></td>
-      <td><button class="calendar-button">3</button></td>
-      <td><button class="calendar-button">4</button></td>
-      <td><button class="calendar-button">5</button></td>
-      <td><button class="calendar-button">6</button></td>
-      <td><button class="calendar-button">7</button></td>
-    </tr>
-    <tr>
-      <td><button class="calendar-button">8</button></td>
-      <td><button class="calendar-button">9</button></td>
-      <td><button class="calendar-button">10</button></td>
-      <td><button class="calendar-button">11</button></td>
-      <td><button class="calendar-button">12</button></td>
-      <td><button class="calendar-button">13</button></td>
-      <td><button class="calendar-button">14</button></td>
-    </tr>
-    <tr>
-      <td><button class="calendar-button">15</button></td>
-      <td><button class="calendar-button">16</button></td>
-      <td><button class="calendar-button">17</button></td>
-      <td><button class="calendar-button">18</button></td>
-      <td><button class="calendar-button">19</button></td>
-      <td><button class="calendar-button">20</button></td>
-      <td><button class="calendar-button">21</button></td>
-    </tr>
-    <tr>
-      <td><button class="calendar-button">22</button></td>
-      <td><button class="calendar-button">23</button></td>
-      <td><button class="calendar-button">24</button></td>
-      <td><button class="calendar-button">25</button></td>
-      <td><button class="calendar-button">26</button></td>
-      <td><button class="calendar-button">27</button></td>
-      <td><button class="calendar-button">28</button></td>
-    </tr>
-    <tr>
-      <td><button class="calendar-button">29</button></td>
-      <td><button class="calendar-button">30</button></td>
-      <td><button class="calendar-button">31</button></td>
-    </tr>
-    </table>
-  <script>
-    const buttons = document.querySelectorAll('.calendar-button');
+    <footer>
+      <hr />
+      <span class="text-reset">Author: Abigail Preece</span>
+      <br />
+      <a href="https://github.com/apreece1/startup.git">GitHub</a>
+    </footer>
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        button.classList.toggle('active');
+    <script>
+      const buttons = document.querySelectorAll('.calendar-button');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          button.classList.toggle('active');
+        });
       });
-    });
-  </script>
-</body>
 
-<head>
-  <title>Simple Calendar</title>
-  <style>
-    .calendar-table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    .calendar-table th, .calendar-table td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: center;
-    }
-
-    .calendar-button {
-      background-color: white;
-      border: none;
-      color: black;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-
-    .calendar-button.active {
-      background-color: green;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-  <table class="calendar-table">
-    </table>
-
-  <div>
-    <p>Number of Days up on Time: <span id="active-days">0</span></p>
-  </div>
-
-  <h1>Trends:</h1>
-  <div>
-  </div>
-  <img src="https://cdn.kastatic.org/ka-perseus-graphie/f36c21e12d10a7f10b7a6a2f9fd7bfa8b53442ec.svg" alt="Image from a link">
-  <div>
-  </div>
-
-  <h2>Progress to Goal</h2>
-  <style>
-    .progress-bar {
-      width: 300px;
-      height: 20px;
-      background-color: #ddd;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      background-color: #4CAF50;
-      width: 0%; /* Initially, the bar is empty */
-    }
-  </style>
-
-  <div class="progress-bar">
-    <div class="progress-bar-fill" id="progress-bar-fill"></div>
-  </div>
-
-  <script>
-    // Set the goal and current progress
-    const goal = 100;
-    const currentProgress = 50;
-
-    // Calculate the percentage of progress
-    const percentage = (currentProgress / goal) * 100;
-
-    // Set the width of the progress bar
-    document.getElementById("progress-bar-fill").style.width = percentage + "%";
-  </script>
-
-<p>Rewards: </p>
-<div class="trophy-case">
-  <img src="trophy.png" alt="Trophy 1">
-  <img src="trophy.png" alt="Trophy 2">
-  <img src="trophy.png" alt="Trophy 3">
-  </div>
-
-  <footer>
-    <hr />
-    <span class="text-reset">Author: Abigail Preece</span>
-    <br />
-    <a href="https://github.com/apreece1/startup.git">GitHub</a>
-  </footer>
-</body>
+      // Set the goal and current progress for the progress bar
+      const goal = 100;
+      const currentProgress = 50;
+      const percentage = (currentProgress / goal) * 100;
+      document.getElementById("progress-bar-fill").style.width = percentage + "%";
+    </script>
+  </body>
 </html>
-

@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connect with Friends:</title>
-    <link rel="icon" href="favicon.ico" />
-  </head>
-  <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
-      <h1>Connect with Friends:</h1>
 
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Alarms.html">Alarms</a></li>
-          <li><a href="Daily Motivation.html">Daily  Motivation</a></li>
-          <li><a href="Personal Stats.html">Personal Stats</a></li>
-          <li><a href="Connect with Friends.html">Connect with Friends</a></li>
-          <li><a href="about.html">About</a></li>
-        </menu>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <!-- Tell browsers not to scale the viewport automatically -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect with Friends</title>
+  <link rel="icon" href="favicon.ico" />
+</head>
 
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+<body>
+  <!-- Use header, main, and footer elements to give semantic structure -->
+  <header>
+    <h1>Connect with Friends:</h1>
 
-      <head>
-      <h1>Message Friends</h1>
+    <!-- Navigation elements -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Alarms.html">Alarms</a></li>
+        <li><a href="Daily Motivation.html">Daily Motivation</a></li>
+        <li><a href="Personal Stats.html">Personal Stats</a></li>
+        <li><a href="Connect with Friends.html">Connect with Friends</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <hr />
+  </header>
+
+  <main>
+    <!-- Message Section -->
+    <section class="message-section">
+      <h2>Message Friends</h2>
       <p>Select Friend:</p>
       <select id="friend-select">
         <option value="friend1">Friend 1</option>
         <option value="friend2">Friend 2</option>
         <option value="friend3">Friend 3</option>
-        </select>
-      </head>
-      <div>
-      </div>
-      <body>
-        <textarea id="message-box" placeholder="Type your message here"></textarea>
-        <button onclick="sendMessage()">Send</button>
-      
-        <script>
-          function sendMessage() {
-            const message = document.getElementById('message-box').value;
-            // Here, you would typically send the message using JavaScript's fetch API or other methods to communicate with a server or messaging service.
-            // For a simple demo, you can display the message on the page:
-            alert('You sent: ' + message);
-          }
-        </script>
+      </select>
 
-<div class="today-selfies">
-  <h2>Today's Selfies</h2>
-  <div class="selfie-card">
-    <img src="user1_selfie.jpg" alt="User 1 Selfie">
-    <p><strong>User 1</strong></p>
-    <p>Woke up at: 7:30 AM</p>
-    <p>Streak: 5 days</p>
-  </div>
-  <div class="selfie-card">
-    <img src="user2_selfie.jpg" alt="User 2 Selfie">
-    <p><strong>User 2</strong></p>
-    <p>Woke up at: 6:45 AM</p>
-    <p>Streak: 12 days</p>
-  </div>
-  </div>
+      <textarea id="message-box" placeholder="Type your message here"></textarea>
+      <button onclick="sendMessage()">Send</button>
+
+      <script>
+        function sendMessage() {
+          const message = document.getElementById('message-box').value;
+          // Typically, you'd send the message to a server, but for this demo, we just show it in an alert.
+          alert('You sent: ' + message);
+        }
+      </script>
+    </section>
+
+    <!-- Selfies Section -->
+    <section class="today-selfies">
+      <h2>Today's Selfies</h2>
+      <div class="selfie-card">
+        <img src="user1_selfie.jpg" alt="User 1 Selfie" />
+        <p><strong>User 1</strong></p>
+        <p>Woke up at: 7:30 AM</p>
+        <p>Streak: 5 days</p>
+      </div>
+      <div class="selfie-card">
+        <img src="user2_selfie.jpg" alt="User 2 Selfie" />
+        <p><strong>User 2</strong></p>
+        <p>Woke up at: 6:45 AM</p>
+        <p>Streak: 12 days</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <hr />
@@ -74,4 +77,5 @@
     <a href="https://github.com/apreece1/startup.git">GitHub</a>
   </footer>
 </body>
+
 </html>

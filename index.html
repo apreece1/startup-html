@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
-    <link rel="icon" href="favicon.ico" />
-  </head>
-  <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
-      <h1>GETUP<sup>&reg;</sup></h1>
 
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Alarms.html">Alarms</a></li>
-          <li><a href="Daily Motivation.html">Daily  Motivation</a></li>
-          <li><a href="Personal Stats.html">Personal Stats</a></li>
-          <li><a href="Connect with Friends.html">Connect with Friends</a></li>
-          <li><a href="about.html">About</a></li>
-        </menu>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <!-- Tell browsers not to scale the viewport automatically -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="icon" href="favicon.ico" />
+</head>
 
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
-    </header>
-    <br>
+<body>
+  <!-- Header with navigation elements -->
+  <header>
+    <h1>GETUP<sup>&reg;</sup></h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Alarms.html">Alarms</a></li>
+        <li><a href="Daily Motivation.html">Daily Motivation</a></li>
+        <li><a href="Personal Stats.html">Personal Stats</a></li>
+        <li><a href="Connect with Friends.html">Connect with Friends</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <hr />
+  </header>
+
+  <main>
+    <!-- Daily Image Section -->
     <div class="daily-image">
-      <img src="placeholder-image.jpg" alt="Daily Image">
+      <img src="placeholder-image.jpg" alt="Daily Image" />
     </div>
 
-    <main>
-      <h1>Goodmorning Welcome to GET UP</h1>
+    <!-- Welcome Section -->
+    <section>
+      <h1>Goodmorning, Welcome to GET UP</h1>
       <form method="get" action="play.html">
         <div>
-          <span>User Login:</span>
-          <input type="text" placeholder="your@email.com" />
+          <label for="user-email">User Login:</label>
+          <input type="email" id="user-email" name="email" placeholder="your@email.com" required />
         </div>
         <div>
-          <span>Password:</span>
-          <input type="password" placeholder="password" />
+          <label for="user-password">Password:</label>
+          <input type="password" id="user-password" name="password" placeholder="password" required />
         </div>
-        <button type="submit">Login</button>
-        <button type="submit">Create</button>
+        <div>
+          <button type="submit">Login</button>
+          <button type="button">Create</button>
+        </div>
       </form>
-    </main>
-    <br>
-    <div>
-    <div class="alarm-clock">
-      <img src="alarm-clock.png" alt="Alarm Clock">
-      <div class="hand">
-        <div class="hand-inner"></div>
+    </section>
+
+    <!-- Alarm Clock Section -->
+    <section class="alarm-clock">
+      <h2>Set Your Alarm</h2>
+      <div class="alarm-clock-image">
+        <img src="alarm-clock.png" alt="Alarm Clock" />
+        <div class="hand">
+          <div class="hand-inner"></div>
+        </div>
       </div>
-    </div>
-  </br>
-    <footer>
-      <hr />
-      <span class="text-reset">Author: Abigail Preece</span>
-      <br />
-      <a href="https://github.com/apreece1/startup.git">GitHub</a>
-    </footer>
-  </body>
-  </html>
-  
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <span class="text-reset">Author: Abigail Preece</span>
+    <br />
+    <a href="https://github.com/apreece1/startup.git">GitHub</a>
+  </footer>
+</body>
+
+</html>
