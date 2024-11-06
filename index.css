@@ -1,135 +1,105 @@
 /* Global Styles */
-body {
-    background-color: #e0f7fa; /* Light teal background */
-    font-family: 'Didot', sans-serif; /* Cute and simplistic font */
-    margin: 0;
-    padding: 0;
-    color: #333; /* Text color for readability */
-  }
-  
-  /* Top Bar */
-  header {
-    background-color: #333; /* Dark grey background */
-    color: #5F9EA0;
-    padding: 15px 0;
+html, body {
+    height: 100%;              /* Ensure body takes full viewport height */
+    margin: 0;                 /* Remove default margin */
+    display: flex;             /* Use flexbox layout */
+    flex-direction: column;    /* Stack header, main, and footer vertically */
+}
+
+/* Top Bar */
+header {
+    background-color: #5F9EA0; /* Teal background */
+    color: white;
     text-align: center;
-  }
-  
-  header h1 {
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
     margin: 0;
-    font-size: 2.5em;
-  }
-  
-  header nav ul {
+    font-size: 3em;
+}
+
+header nav ul {
     list-style: none;
-    padding: 0;
-  }
-  
-  header nav ul li {
+    padding: 10px;
+    margin: 0;
+}
+
+header nav ul li {
     display: inline;
-    margin: 0 20px;
-  }
-  
-  header nav ul li a {
+    margin: 10px;
+}
+
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
-  }
-  
-  header nav ul li a:hover {
-    color: #00bcd4; /* Accent color when hovering */
-  }
-  
-  hr {
-    border: 1px solid #ddd; /* Light grey line for separation */
-  }
-  /*Goodnmorning section*/
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    min-height: 60vh; /* Take at least 60% of the viewport height */
-    text-align: center; /* Center the text */
-    margin: 0 auto;
-    font-family: 'Poppins', sans-serif; /* Apply 'Poppins' font to this section */
-  }
+}
 
-  section h1 {
-    font-size: 2.2em;
-    margin-bottom: 30px; /* Add space below the heading */
-    color: #333; /* Dark color for readability */
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  form {
-    padding: 30px;
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  form div {
-    margin-bottom: 15px;
-  }
+header nav ul li a:hover {
+    color: #5f83a0; /* Accent color when hovering */
+}
 
-  /* Main Content */
-  main {
+hr {
+    display: none;  /* Hide hr tags to remove unwanted lines */
+}
+
+/* Main Content */
+main {
     padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .daily-image img {
+    flex: 1;                 /* Allow main to take available space */
+}
+
+.daily-image img {
     max-width: 100%;
     height: auto;
-  }
-  
-  section {
+}
+
+section {
     margin-bottom: 40px;
-  }
-  
-  /* Welcome Section (Login Form) */
-  form {
-    padding: 30px;
+    margin-top: 50px;  /* Increased space between menu and login box */
+}
+
+/* Welcome Section (Login Form) */
+form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: auto;
     background-color: white;
-    padding: 20px;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  form div {
+}
+
+form div {
     margin-bottom: 15px;
-  }
-  
-  form label {
+}
+
+form label {
     font-weight: bold;
     display: block;
-  }
-  
-  form input[type="email"],
-  form input[type="password"] {
+}
+
+form input[type="email"],
+form input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
-  }
-  
-  form input[type="email"]:focus,
-  form input[type="password"]:focus {
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
     border-color: #00bcd4;
     outline: none;
-  }
-  
-  form button {
+}
+
+form button {
     background-color: #5F9EA0; /* Teal button */
     color: white;
     padding: 10px 15px;
@@ -138,38 +108,37 @@ body {
     font-size: 1.1em;
     cursor: pointer;
     width: 100%;
-  }
-  
-  form button[type="submit"]:hover {
-    background-color:#5f83a0; /* Darker teal on hover */
-  }
-  
-  form button[type="button"] {
-    background-color: #5F9EA0; /* Red for 'Create' button */
+}
+
+form button[type="submit"]:hover {
+    background-color: #5f83a0; /* Darker teal on hover */
+}
+
+form button[type="button"] {
+    background-color: #5F9EA0; /* Teal for 'Create' button */
     margin-top: 10px;
-  }
-  
-  form button[type="button"]:hover {
-    background-color: #5f83a0; /* Darker red on hover */
-  }
-  
-  
-  /* Footer Styles */
-  footer {
+}
+
+form button[type="button"]:hover {
+    background-color: #5f83a0; /* Darker teal on hover */
+}
+
+/* Footer Styles */
+footer {
     text-align: center;
     background-color: #333;
     color: white;
-    padding: 20px 0;
     font-size: 1em;
-  }
-  
-  footer a {
+    padding: 20px 0;        /* Add padding for spacing */
+    margin-top: auto;       /* Ensure the footer is always at the bottom */
+}
+
+footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  footer a:hover {
-    color: #00bcd4;
-  }
-  
+}
+
+footer a:hover {
+    color: #5f83a0;
+}
