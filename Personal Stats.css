@@ -38,7 +38,7 @@ html, body {
   }
   
   header nav ul li a:hover {
-    color: #5f83a0;
+    color: #333;
   }
   
   hr {
@@ -53,31 +53,123 @@ html, body {
     flex: 1;
   }
   
-  /* Alarm Section (Adapted for Personal Stats) */
-  .alarm-section {
-    text-align: center;
+  /* Personal Stats (Adapted for Personal Stats) */
+
+  .month-selector {
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .alarm-section button {
-    /* Adjust button styles to fit the overall design */
-    display: inline-block;
-    padding: 10px 20px;
+}
+
+/* Label styling */
+.month-selector label {
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #333; /* Darker text for readability */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Select dropdown styling */
+.month-selector select {
+    font-size: 1.2rem; /* Increase font size of dropdown */
+    padding: 10px 15px;
     border-radius: 5px;
-    background-color: #5F9EA0;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .alarm-section button:hover {
-    background-color: #333;
-  }
+    border: 2px solid #333; /* Soft border */
+    width: 100%; /* Full width of the container */
+    background-color: #f9f9f9; /* Light background for the dropdown */
+    color: #333;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for select element */
+.month-selector select:hover {
+    border-color: #333; /* Highlight border on hover */
+    background-color: #e6f7ff; /* Slight background color change */
+}
+
+/* Styling the month display container */
+#month-display {
+    margin-top: 20px;
+}
+
+/* Styling the selected month text */
+#month-display p {
+    font-size: 1.5rem; /* Larger text size for the display */
+    font-weight: bold;
+    color: #333;
+}
+
+#selected-month {
+    font-size: 1.5rem; /* Larger font for the selected month */
+    color: #333; /* Blue color for the selected month */
+}
+
+/* Title Section (Daily Tracker Header) */
+.Graphs h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Calendar Table Styling */
+.calendar {
+  width: 100%;
+}
+
+/* Calendar Table Style */
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table Cells for Calendar */
+.calendar-table td {
+  width: 14.28%; /* 7 days in a week, 100% divided by 7 */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Calendar Buttons */
+.calendar-button {
+  width: 100%;
+  height: 50px;
+  font-size: 1.2rem;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensures padding is included in button size */
+}
+
+/* Hover Effect for Buttons */
+.calendar-button:hover {
+  background-color: #007BFF;
+  color: #fff;
+  border-color: #0056b3;
+}
+
+/* Active Day Styling */
+.calendar-button.active {
+  background-color: #28a745; /* Green for active days */
+  color: #fff;
+  border-color: #218838;
+}
+
+/* Number of Days up on Time Section */
+#active-days {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007BFF; /* Blue color for emphasis */
+  margin-top: 20px;
+}
+
+/* Optional: Adding Margin Around the Calendar Section */
+.calendar {
+  margin-top: 30px;
+}
   
   /* Footer Styles */
   footer {
@@ -96,5 +188,5 @@ html, body {
   }
   
   footer a:hover {
-    color: #5f83a0;
+    color: #5F9EA0;
   }
