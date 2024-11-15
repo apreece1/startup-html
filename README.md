@@ -40,3 +40,43 @@ By incorporating the morning photo challenge as an immediate prompt after turnin
 
 **Sketch**
 ![Untitled_Artwork](https://github.com/user-attachments/assets/8451ae28-e1b4-4c3a-a921-44424e6c624a)
+
+
+## Deliverable Notes:
+
+Deliverable 1: Project Setup and Initial Implementation
+
+Description:
+This deliverable focused on setting up the project structure and implementing the foundational elements of the website.
+
+Completed Tasks:
+
+Project Setup:
+Created a new Git repository to manage the project.
+Initialized the project structure with HTML.
+HTML Structure:
+Created or edited HTML files for each page: index.html, about.html, contact.html, etc.
+Defined the basic structure of each page, including a header, navigation bar, main content, and footer.
+Styling:
+Implemented basic styling for the overall layout.
+Image Integration:
+Added images to the HTML pages using the <img> tag.
+Adjusted image dimensions and alt text for accessibility.
+HTML Editing and Refinement:
+Edited the HTML code to improve the structure, semantics, and readability.
+Added appropriate HTML elements (e.g., headings, paragraphs, lists) to organize content.
+Future Work:
+
+Implement the desired functionality for each page.
+Add interactive elements, such as forms and buttons.
+Refine the CSS styling to achieve a more polished and professional look.
+Optimize the website for different screen sizes and devices.
+Test the website thoroughly to ensure it works as expected.
+
+
+
+
+
+
+
+
