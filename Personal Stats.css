@@ -146,9 +146,9 @@ html, body {
 
 /* Hover Effect for Buttons */
 .calendar-button:hover {
-  background-color: #007BFF;
+  background-color: #333;
   color: #fff;
-  border-color: #0056b3;
+  border-color: #5F9EA0;
 }
 
 /* Active Day Styling */
@@ -162,7 +162,7 @@ html, body {
 #active-days {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007BFF; /* Blue color for emphasis */
+  color: #333; /* Blue color for emphasis */
   margin-top: 20px;
 }
 
@@ -170,7 +170,145 @@ html, body {
 .calendar {
   margin-top: 30px;
 }
-  
+
+/* Styling the Progress to Goal Header */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling the Progress Bar container */
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background-color: #e0e0e0; /* Light gray background for the progress bar */
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* Progress Bar Fill (Green/Blue Color for filled area) */
+.progress-bar-fill {
+  height: 100%;
+  background-color: #4CAF50; /* Green color for progress fill */
+  width: 0%; /* Start with 0% width */
+  border-radius: 12px;
+  transition: width 0.5s ease-in-out; /* Smooth transition for filling effect */
+}
+
+/* Rewards Section */
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Styling the Trophy Case container */
+.trophy-case {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between the trophies */
+  margin-top: 20px;
+}
+
+/* Styling each trophy image */
+.trophy-case img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for each trophy (scale and shadow) */
+.trophy-case img:hover {
+  transform: scale(1.1); /* Slightly enlarge the trophy on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+/* Main container for the data section */
+#database-data-placeholder {
+  background-color: #ffffff; /* White background for the placeholder */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a card-like effect */
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+  color: #333; /* Dark text for readability */
+}
+
+/* Heading for the placeholder */
+#database-data-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #777; /* Lighter text color */
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+/* Add a subtle pulse animation to indicate loading */
+#database-data-placeholder::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007BFF; /* Blue color for a health-related feel */
+  animation: pulse 1.5s infinite ease-in-out;
+  margin: 0 auto 20px;
+}
+
+/* Pulse animation to give a loading effect */
+@keyframes pulse {
+  0% {
+      transform: scale(0.8);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 0.6;
+  }
+  100% {
+      transform: scale(0.8);
+      opacity: 1;
+  }
+}
+
+/* Optional: Add a loading spinner or icon */
+#database-data-placeholder .icon {
+  display: block;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+  color: #007BFF;
+}
+
+/* Style the text for the placeholder */
+#database-data-placeholder p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Fade in effect for when data is loaded */
+#database-data-placeholder.loaded {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
   /* Footer Styles */
   footer {
     text-align: center;
