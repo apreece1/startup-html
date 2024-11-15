@@ -53,17 +53,29 @@ main {
     flex: 1;                 /* Allow main to take available space */
 }
 
+/*Subheading*/
+
+.subheading {
+text-align: center;
+padding: 50px;
+font-size: 3em;
+margin-bottom: 0px;
+}
+
+/* catergories*/
+
 .categories {
   text-align: center;
-  padding: 30px;
+  padding: 50px;
   border-radius: 10px;
   background-color: #f0f0f0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 0px; 
 }
 
 .categories ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
 }
 
