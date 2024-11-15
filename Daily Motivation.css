@@ -54,45 +54,67 @@ main {
 }
 
 .categories {
-    text-align: center;
-    margin-bottom: 20px; /* Optional spacing */
-  }
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories li {
+  padding: 10px;
+}
+
+.categories a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.categories a:hover {
+  color: #007bff;
+}
+
+.arrow-right {
+  margin-left: 10px;
+  background-color: #f0f0f0; /* Light background color */
+  border: 1px solid #ccc; /* Thin border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.arrow-right:hover {
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
   
-  .categories nav {
-    display: flex;
-    justify-content: space-between; /* Align buttons at ends */
-    align-items: center;
-  }
-  
-  .category-container {
-    overflow: hidden; /* Hide overflowing content */
-    white-space: nowrap; /* Prevent wrapping of list items */
-  }
-  
-  .category-container ul {
-    display: inline-block;
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  .arrow {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px; /* Adjust padding for desired arrow size */
-    font-size: 1.5em; /* Adjust font size for arrow symbol */
-  }
-  
-  .arrow:hover {
-    opacity: 0.10; /* Slight opacity change on hover */
-  }
-  
-  .arrow-left {
-    margin-right: 10px; /* Spacing between arrow and list */
-  }
-  
-  .arrow-right {
-    margin-left: 10px; /* Spacing between arrow and list */
-  }
+
+.arrow-left {
+  margin-left: 10px;
+  background-color: #f0f0f0; /* Light background color */
+  border: 1px solid #ccc; /* Thin border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.arrow-left:hover {
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
 
 /* Footer Styles */
 footer {
