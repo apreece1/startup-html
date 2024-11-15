@@ -1,104 +1,100 @@
 /* Global Styles */
 html, body {
-    height: 100%;              /* Ensure body takes full viewport height */
-    margin: 0;                 /* Remove default margin */
-    display: flex;             /* Use flexbox layout */
-    flex-direction: column;    /* Stack header, main, and footer vertically */
-}
-
-/* Top Bar */
-header {
-    background-color: #5F9EA0; /* Teal background */
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Top Bar */
+  header {
+    background-color: #5F9EA0;
     color: white;
     text-align: center;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     padding: 20px;
     margin: 0;
     font-size: 3em;
-}
-
-header nav ul {
+  }
+  
+  header nav ul {
     list-style: none;
     padding: 10px;
     margin: 0;
-}
-
-header nav ul li {
+  }
+  
+  header nav ul li {
     display: inline;
     margin: 10px;
-}
-
-header nav ul li a {
+  }
+  
+  header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
-}
-
-header nav ul li a:hover {
-    color: #5f83a0; /* Accent color when hovering */
-}
-
-hr {
-    display: none;  /* Hide hr tags to remove unwanted lines */
-}
-
-/* Main Content */
-main {
-    padding: 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex: 1;                 /* Allow main to take available space */
-}
-
-/* alarms.css */
-
-
-
-.alarm-section {
-    text-align: center;
-    margin-bottom: 20px;
-    border: 0.5px solid #ccc; /* Add a border */
-    padding: 60px; /* Add padding for space inside the box */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3)
   }
   
-.alarm-section button {
-  display: inline-block;
-  padding: 8px 10px;
-  border-radius: 6px; /* Adjust the radius for a square shape */
-  background-color: #5F9EA0;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
-}
+  header nav ul li a:hover {
+    color: #5f83a0;
+  }
+  
+  hr {
+    display: none;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 20px; /* Reduced padding for a more compact layout */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+  }
+  
+  /* Alarm Section (Adapted for Personal Stats) */
+  .alarm-section {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .alarm-section button {
+    /* Adjust button styles to fit the overall design */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #5F9EA0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
   
   .alarm-section button:hover {
     background-color: #333;
   }
   
-
-/* Footer Styles */
-footer {
+  /* Footer Styles */
+  footer {
     text-align: center;
     background-color: #333;
     color: white;
     font-size: 1em;
-    padding: 20px 0;        /* Add padding for spacing */
-    margin-top: auto;       /* Ensure the footer is always at the bottom */
-}
-
-footer a {
+    padding: 20px 0;
+    margin-top: auto;
+  }
+  
+  footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-
-footer a:hover {
+  }
+  
+  footer a:hover {
     color: #5f83a0;
-}
+  }

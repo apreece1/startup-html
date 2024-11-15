@@ -1,152 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Stats</title>
-    <link rel="icon" href="favicon.ico" />
-    <!-- Link to External CSS File -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Personal Stats:</h1>
-      <link rel="stylesheet" href="Personal Stats.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Stats</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      <!-- Include bootstrap CSS framework -->
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-        crossorigin="anonymous"
-      />
-      
-      <nav>
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Alarms.html">Alarms</a></li>
-          <li><a href="Daily Motivation.html">Daily Motivation</a></li>
-          <li><a href="Personal Stats.html">Personal Stats</a></li>
-          <li><a href="Connect with Friends.html">Connect</a></li>
-          <li><a href="about.html">About</a></li>
-        </menu>
-      </nav>
-      <hr />
-    </header>
 
-    <main>
-            <!-- Month Selector -->
-            <div class="month-selector">
-              <label for="month">Choose a month:</label>
-              <select id="month" name="month">
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-              </select>
-            </div>
-      
-            <div id="month-display">
-              <p>Selected Month: <span id="selected-month">January</span></p>
-            </div>
-      
-            <script>
-              // Get reference to the select dropdown and the display area
-              const monthSelect = document.getElementById("month");
-              const monthDisplay = document.getElementById("selected-month");
-      
-              // Event listener to update the displayed month whenever the user selects a new one
-              monthSelect.addEventListener("change", function () {
-                const selectedMonth = monthSelect.value;
-                monthDisplay.textContent = selectedMonth;
-              });
+<link rel="stylesheet" href="Alarms.css" />
 
-      </script>
-            
-      <div class="Graphs">
-        <h1>Daily Tracker:</h1>
-      </div>
+<!-- Include bootstrap CSS framework -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+  crossorigin="anonymous"
+/>
 
-      <div class="calendar">
-        <table class="calendar-table">
-          <tr>
-            <td><button class="calendar-button">1</button></td>
-            <td><button class="calendar-button">2</button></td>
-            <td><button class="calendar-button">3</button></td>
-            <td><button class="calendar-button">4</button></td>
-            <td><button class="calendar-button">5</button></td>
-            <td><button class="calendar-button">6</button></td>
-            <td><button class="calendar-button">7</button></td>
-          </tr>
-          <tr>
-            <td><button class="calendar-button">8</button></td>
-            <td><button class="calendar-button">9</button></td>
-            <td><button class="calendar-button">10</button></td>
-            <td><button class="calendar-button">11</button></td>
-            <td><button class="calendar-button">12</button></td>
-            <td><button class="calendar-button">13</button></td>
-            <td><button class="calendar-button">14</button></td>
-          </tr>
-          <tr>
-            <td><button class="calendar-button">15</button></td>
-            <td><button class="calendar-button">16</button></td>
-            <td><button class="calendar-button">17</button></td>
-            <td><button class="calendar-button">18</button></td>
-            <td><button class="calendar-button">19</button></td>
-            <td><button class="calendar-button">20</button></td>
-            <td><button class="calendar-button">21</button></td>
-          </tr>
-          <tr>
-            <td><button class="calendar-button">22</button></td>
-            <td><button class="calendar-button">23</button></td>
-            <td><button class="calendar-button">24</button></td>
-            <td><button class="calendar-button">25</button></td>
-            <td><button class="calendar-button">26</button></td>
-            <td><button class="calendar-button">27</button></td>
-            <td><button class="calendar-button">28</button></td>
-          </tr>
-          <tr>
-            <td><button class="calendar-button">29</button></td>
-            <td><button class="calendar-button">30</button></td>
-            <td><button class="calendar-button">31</button></td>
-          </tr>
-          <!-- More rows for calendar buttons -->
-        </table>
-        <p>Number of Days up on Time: <span id="active-days">0</span></p>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <!-- Tell browsers not to scale the viewport automatically -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alarms</title>
+  <link rel="icon" href="favicon.ico" />
+</head>
 
-      <h1>Trends:</h1>
-      <img src="https://cdn.kastatic.org/ka-perseus-graphie/f36c21e12d10a7f10b7a6a2f9fd7bfa8b53442ec.svg" alt="Graph Image">
+<body>
+  <header>
+    <h1>Personal Stats</h1>
+    <nav>
+      <menu>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Alarms.html">Alarms</a></li>
+        <li><a href="Daily Motivation.html">Daily Motivation</a></li>
+        <li><a href="Personal Stats.html">Personal Stats</a></li>
+        <li><a href="Connect with Friends.html">Connect</a></li>
+        <li><a href="about.html">About</a></li>
+      </menu>
+    </nav>
+    <hr>
+  </header>
 
-      <h2>Progress to Goal</h2>
-      <div class="progress-bar">
-        <div class="progress-bar-fill" id="progress-bar-fill"></div>
-      </div>
-
-      <p>Rewards:</p>
-      <div class="trophy-case">
-        <img src="reward1.png" alt="Trophy 1" width="80" height="80">
-        <img src="medal.png" alt="Trophy 2" width="80" height="80">
-        <img src="reward2.png" alt="Trophy 3" width="80" height="80">
-      </div>
-    </main>
-
-    <div id="database-data-placeholder">
-      <p>Data will be displayed from the database here most likely referncing health patterns or some other health app?</p>
+  <main>
+    <div class="month-selector">
+      <label for="month">Choose a month:</label>
+      <select id="month" name="month">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+    </div>
+    <div id="month-display">
+      <p>Selected Month: <span id="selected-month">January</span></p>
     </div>
 
+    <script>
+      // Script to update selected month display
+      const monthSelect = document.getElementById("month");
+      const monthDisplay = document.getElementById("selected-month");
 
-<footer>
-  <hr />
-  <span class="text-reset">Author: Abigail Preece</span>
-  <br />
-  <a href="https://github.com/apreece1/startup-html">GitHub</a>
-</footer>
+      monthSelect.addEventListener("change", function () {
+        const selectedMonth = monthSelect.value;
+        monthDisplay.textContent = selectedMonth;
+      });
+    </script>
+
+    <div class="daily-tracker">
+      <h1>Daily Tracker:</h1>
+      <div class="calendar">
+        <table class="calendar-table">
+          </table>
+      </div>
+      <p>Number of Days Up on Time: <span id="active-days">0</span></p>
+    </div>
+
+    <h1>Trends:</h1>
+    <img src="https://cdn.kastatic.org/ka-perseus-graphie/f36c21e12d10a7f10b7a6a2f9fd7bfa8b53442ec.svg" alt="Graph Image">
+
+    <h2>Progress to Goal</h2>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="progress-bar-fill"></div>
+    </div>
+
+    <p>Rewards:</p>
+    <div class="trophy-case">
+      <img src="reward1.png" alt="Trophy 1" width="80" height="80">
+      <img src="medal.png" alt="Trophy 2" width="80" height="80">
+      <img src="reward2.png" alt="Trophy 3" width="80" height="80">
+    </div>
+
+    <div id="database-data-placeholder">
+      <p>Data will be displayed from the database here, most likely referencing health patterns or some other health app data.</p>
+    </div>
+  </main>
+
+  <footer>
+    <hr>
+    <span class="text-reset">Author: Abigail Preece</span>
+    <br>
+    <a href="https://github.com/apreece1/startup-html">GitHub</a>
+  </footer>
+</body>
+</html>

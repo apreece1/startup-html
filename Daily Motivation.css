@@ -53,35 +53,46 @@ main {
     flex: 1;                 /* Allow main to take available space */
 }
 
-/* alarms.css */
-
-
-
-.alarm-section {
+.categories {
     text-align: center;
-    margin-bottom: 20px;
-    border: 0.5px solid #ccc; /* Add a border */
-    padding: 60px; /* Add padding for space inside the box */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3)
+    margin-bottom: 20px; /* Optional spacing */
   }
   
-.alarm-section button {
-  display: inline-block;
-  padding: 8px 10px;
-  border-radius: 6px; /* Adjust the radius for a square shape */
-  background-color: #5F9EA0;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
-}
-  
-  .alarm-section button:hover {
-    background-color: #333;
+  .categories nav {
+    display: flex;
+    justify-content: space-between; /* Align buttons at ends */
+    align-items: center;
   }
   
+  .category-container {
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent wrapping of list items */
+  }
+  
+  .category-container ul {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px; /* Adjust padding for desired arrow size */
+    font-size: 1.5em; /* Adjust font size for arrow symbol */
+  }
+  
+  .arrow:hover {
+    opacity: 0.10; /* Slight opacity change on hover */
+  }
+  
+  .arrow-left {
+    margin-right: 10px; /* Spacing between arrow and list */
+  }
+  
+  .arrow-right {
+    margin-left: 10px; /* Spacing between arrow and list */
+  }
 
 /* Footer Styles */
 footer {
