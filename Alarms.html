@@ -40,7 +40,7 @@
   </header>
 
   <main>
-    <section class="alarms">
+    <!-- <section class="alarms">
       <h2>Create Alarm:</h2>
       <button>
         <img src="plussign.png" alt="Plus" width="20" height="20" />
@@ -78,6 +78,24 @@
           </tr>
         </tbody>
       </table>
+    </section> -->
+    <section class="alarm-section">
+      <h2>Create Alarm:</h2>
+      <div class="alarm-details">
+        <label for="alarm-time">Set Time:</label>
+        <select id="alarm-hour">
+          <option value="12">12</option>
+          </select>
+        <select id="alarm-minute">
+          <option value="00">00</option>
+          </select>
+          <select id="alarm-am-pm">
+            <option value="00">PM</option>
+            </select>
+        <label for="alarm-toggle">On/Off:</label>
+        <input type="checkbox" id="alarm-toggle">
+      </div>
+      <button>Add Alarm</button>
     </section>
   </main>
 
