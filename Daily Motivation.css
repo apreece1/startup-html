@@ -58,8 +58,8 @@ main {
 
 .categories {
   text-align: center;
-  padding: 50px;
-  border-radius: 10px;
+  padding: 100px;
+  border-radius: 5px;
   background-color: #f0f0f0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin-top: 0px;
@@ -119,6 +119,12 @@ main {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
 }
 
+/*weather placeholder*/
+
+#weather-placeholder {
+  margin-top: 90px;
+  text-align: center;
+}
 
 /* Footer Styles */
 footer {
