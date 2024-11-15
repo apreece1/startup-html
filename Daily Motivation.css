@@ -45,80 +45,45 @@ hr {
     display: none;  /* Hide hr tags to remove unwanted lines */
 }
 
-/*recieved*/
+/* Main Content */
+main {
+    padding: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;                 /* Allow main to take available space */
+}
+
+/* alarms.css */
 
 
 
-/* Message Section Styles */
-.message-section {
+.alarm-section {
     text-align: center;
-    margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
     border: 0.5px solid #ccc; /* Add a border */
     padding: 60px; /* Add padding for space inside the box */
-    border-radius: 50px; /* Add rounded corners */
+    border-radius: 10px; /* Add rounded corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3)
   }
   
-  /* Friend Select Styles */
-  .friend-select {
-    text-align: center;
-    padding-bottom: 10px; /* Adjust padding for spacing */
+.alarm-section button {
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 6px; /* Adjust the radius for a square shape */
+  background-color: #5F9EA0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
+}
+  
+  .alarm-section button:hover {
+    background-color: #333;
   }
   
-  /* Message Box Styles */
-  .message-box textarea {
-    width: 90%; /* Adjust the width as needed */
-    padding-bottom: 15px; /* Adjust padding for spacing */
-  }
-  
-  /* Button Styles */
-  .message-section button {
-    display: inline-block;
-    padding: 8px 10px;
-    border-radius: 6px; /* Adjust the radius for a square shape */
-    background-color: #5F9EA0;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Smooth hover effect */
-  }
-  
-  .message-section button:hover {
-    background-color: #333; /* Button color on hover */
-  }
 
-/*selfie section*/
-
-.today-selfies {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .selfie-card {
-    display: inline-block;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a shadow for a 3D effect */
-    width: 200px; /* Adjust the width as needed */
-  }
-  
-  .selfie-card img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  
-  .selfie-card p {
-    text-align: center;
-    margin: 5px 0;
-  }
-
-  /* Footer Styles */
+/* Footer Styles */
 footer {
     text-align: center;
     background-color: #333;
