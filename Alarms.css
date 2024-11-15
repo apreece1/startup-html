@@ -14,7 +14,6 @@ header {
 }
 
 header h1 {
-    font-family: 'Roboto', sans-serif;
     padding: 20px;
     margin: 0;
     font-size: 3em;
@@ -48,54 +47,41 @@ hr {
 
 /* Main Content */
 main {
-    padding: 30px;
+    padding: 100px;
     max-width: 1200px;
     margin: 0 auto;
     flex: 1;                 /* Allow main to take available space */
 }
 
-.alarms button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #5F9EA0;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
-  }
-  
-  .alarms button img {
-    width: 20px;
-    height: 20px;
-  }
+/* alarms.css */
 
-#alarm-list {
-    margin-top: 20px;
-  }
-  
-  #alarm-list table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  #alarm-list th,
-  #alarm-list td {
-    padding: 10px;
-    border: 1px solid #ddd;
+
+
+.alarm-section {
     text-align: center;
+    margin-bottom: 20px;
+    border: 0.5px solid #ccc; /* Add a border */
+    padding: 60px; /* Add padding for space inside the box */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3)
   }
   
-  #alarm-list button {
-    width: 50px;
-    height: 25px;
-    border-radius: 5px;
-    border: none;
-    background-color: #fff;
-    cursor: pointer;
+.alarm-section button {
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 6px; /* Adjust the radius for a square shape */
+  background-color: #5F9EA0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
+}
+  
+  .alarm-section button:hover {
+    background-color: #333;
   }
+  
 
 /* Footer Styles */
 footer {
