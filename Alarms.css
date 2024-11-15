@@ -45,3 +45,74 @@ header nav ul li a:hover {
 hr {
     display: none;  /* Hide hr tags to remove unwanted lines */
 }
+
+/* Main Content */
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;                 /* Allow main to take available space */
+}
+
+.alarms button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #5F9EA0;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
+  }
+  
+  .alarms button img {
+    width: 20px;
+    height: 20px;
+  }
+
+#alarm-list {
+    margin-top: 20px;
+  }
+  
+  #alarm-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #alarm-list th,
+  #alarm-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  #alarm-list button {
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    padding: 20px 0;        /* Add padding for spacing */
+    margin-top: auto;       /* Ensure the footer is always at the bottom */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #5f83a0;
+}
