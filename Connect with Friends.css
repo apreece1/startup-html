@@ -1,0 +1,82 @@
+/* Global Styles */
+html, body {
+    height: 100%;              /* Ensure body takes full viewport height */
+    margin: 0;                 /* Remove default margin */
+    display: flex;             /* Use flexbox layout */
+    flex-direction: column;    /* Stack header, main, and footer vertically */
+}
+
+/* Top Bar */
+header {
+    background-color: #5F9EA0; /* Teal background */
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    padding: 20px;
+    margin: 0;
+    font-size: 3em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    color: #5f83a0; /* Accent color when hovering */
+}
+
+hr {
+    display: none;  /* Hide hr tags to remove unwanted lines */
+}
+
+/* Message Section Styles */
+.message-section {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto; /* Center the message section horizontally */
+    border: 1px solid #ccc; /* Add a box around the section */
+    border-radius: 5px;
+    padding-bottom: 15px; /* Add some space below the button */
+  }
+  
+  .friend-select {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .message-box{
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  /* Button Styles */
+  .message-section button {
+    text-align: center;
+    background-color: #; /* Change send button color */
+    color: white;
+    padding: 10px 5px; /* Adjust padding for wider button */
+    border: none;
+    border-radius: 50%; /* Make the button a circle */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Add a smooth hover effect */
+  }
+  
+  .message-section button:hover {
+    background-color: #333; /* Change button color on hover */
+  }
