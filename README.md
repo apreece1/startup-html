@@ -75,6 +75,76 @@ Test the website thoroughly to ensure it works as expected.
 
 
 
+Deliverable Notes for CSS Styling Updates and Feature Modifications
+Objective
+To enhance the visual design and functionality of the website by editing existing CSS styles, incorporating new features, and removing outdated or unnecessary elements. The updates aim to improve user experience, maintain a clean and professional aesthetic, and ensure consistency across all components.
+
+Deliverables
+1. CSS Styling Enhancements
+Font Styling
+
+Ensure the global font is set to Roboto, with appropriate fallbacks.
+Update the <head> section to include the Google Fonts link for Roboto.
+Ensure consistent font sizes, weights, and line-heights across all elements.
+Layout Improvements
+
+Ensure Flexbox is used effectively for responsive and clean layouts.
+Add or refine padding, margin, and alignment to improve spacing consistency.
+Adjust box-shadow properties for elements like cards, buttons, and forms to enhance depth perception.
+Color Palette Updates
+
+Standardize color schemes across headers, buttons, links, and hover states.
+Replace outdated colors with modern, accessible ones that meet WCAG contrast guidelines.
+Hover and Transition Effects
+
+Add smooth hover transitions to buttons, links, and interactive elements.
+Refine scaling and shadow effects for hover states on images and cards.
+2. New Feature Incorporation
+Emoji Art Attribution
+
+Add a Credits section in the footer to acknowledge the use of emojis or related resources.
+Example:
+html
+Copy code
+<footer>
+    <p>Emoji artwork credits: <a href="https://twemoji.twitter.com/" target="_blank">Twemoji by Twitter</a>.</p>
+</footer>
+Progress Bar
+
+Introduce a progress bar component for tracking user actions or loading states.
+Ensure the progress bar is styled consistently with the website’s design using rounded edges and smooth animations.
+Picture Box with Hover Effects
+
+Add a "picture-box" feature with elevated hover effects for showcasing images or content highlights.
+Beveled Design
+
+Add beveled shadow effects to sections and cards for a more modern design aesthetic.
+3. Removal of Deprecated Features
+Unused Elements
+
+Remove unnecessary <hr> tags or elements that clutter the layout.
+Delete unused CSS styles to streamline the codebase.
+Redundant Features
+
+Remove outdated buttons or features that are no longer aligned with the website’s purpose.
+Eliminate placeholder or unused images and text blocks.
+4. Accessibility and Performance Improvements
+Ensure all updates meet WCAG 2.1 accessibility standards:
+Sufficient color contrast.
+Keyboard navigability for interactive elements.
+Screen-reader-friendly attributes (e.g., alt for images).
+Optimize CSS for performance by removing unnecessary styles and using shorthand properties where applicable.
+5. Testing and Deployment
+Browser Testing
+
+Test the website across major browsers (Chrome, Firefox, Safari, Edge).
+Validate responsiveness on mobile, tablet, and desktop views.
+Performance Testing
+
+Check for layout shifts or rendering delays.
+Minimize CSS file size using tools like a CSS minifier.
+Timeline
+Completed over the course of a few weeks
 
 
 
