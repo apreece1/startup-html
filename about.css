@@ -1,18 +1,9 @@
-/* Global Styles */
 html, body {
     height: 100%;              /* Ensure body takes full viewport height */
     margin: 0;                 /* Remove default margin */
     display: flex;             /* Use flexbox layout */
-    flex-direction: column; /* Stack header, main, and footer vertically */
-}
-
-
-/* Body Styling */
-body {
-    font-family: 'Roboto', sans-serif; /* Make sure body text uses Roboto */
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    flex-direction: column;    /* Stack header, main, and footer vertically */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 
@@ -24,20 +15,20 @@ header {
 }
 
 header h1 {
-    padding: 1.25rem;
+    padding: 20px;
     margin: 0;
     font-size: 3em;
 }
 
 header nav ul {
     list-style: none;
-    padding: 0.625rem;
+    padding: 10px;
     margin: 0;
 }
 
 header nav ul li {
     display: inline;
-    margin: 0,625 rem;
+    margin: 10px;
 }
 
 header nav ul li a {

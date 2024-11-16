@@ -1,116 +1,101 @@
+
 /* Global Styles */
 html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
+  height: 100%;              /* Ensure body takes full viewport height */
+  margin: 0;                 /* Remove default margin */
+  display: flex;             /* Use flexbox layout */
+  flex-direction: column;    /* Stack header, main, and footer vertically */
+}
 
-  /* Body Styling */
-body {
-  font-family: 'Roboto', sans-serif; /* Make sure body text uses Roboto */
-  line-height: 1.6;
-  background-color: #f4f4f4;
+/* Top Bar */
+header {
+  background-color: #5F9EA0; /* Teal background */
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  padding: 20px;
+  margin: 0;
+  font-size: 3em;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+  color: #333; /* Accent color when hovering */
+}
+
+hr {
+  display: none;  /* Hide hr tags to remove unwanted lines */
+}
+/* Main Content */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* Personal Stats (Month Selector) */
+.month-selector {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.month-selector label {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.month-selector select {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.month-selector select:hover {
+  border-color: #333;
+  background-color: #e6f7ff;
+}
+
+#month-display {
+  margin-top: 20px;
+}
+
+#month-display p {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #333;
 }
 
-
-  
-  /* Top Bar */
-  header {
-    background-color: #5F9EA0;
-    color: white;
-    text-align: center;
-  }
-  
-  header h1 {
-    padding: 20px;
-    margin: 0;
-    font-size: 3em;
-  }
-  
-  header nav ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-  
-  header nav ul li {
-    display: inline;
-    margin: 10px;
-  }
-  
-  header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  header nav ul li a:hover {
-    color: #333;
-  }
-  
-  hr {
-    display: none;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 20px; /* Reduced padding for a more compact layout */
-    max-width: 1200px;
-    margin: 0 auto;
-    flex: 1;
-  }
-  
-  /* Personal Stats (Adapted for Personal Stats) */
-
-  .month-selector {
-    margin-bottom: 20px;
-}
-
-/* Label styling */
-.month-selector label {
-    font-size: 1.2rem; /* Slightly larger font size */
-    color: #333; /* Darker text for readability */
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-}
-
-/* Select dropdown styling */
-.month-selector select {
-    font-size: 1.2rem; /* Increase font size of dropdown */
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 2px solid #333; /* Soft border */
-    width: 100%; /* Full width of the container */
-    background-color: #f9f9f9; /* Light background for the dropdown */
-    color: #333;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for select element */
-.month-selector select:hover {
-    border-color: #333; /* Highlight border on hover */
-    background-color: #e6f7ff; /* Slight background color change */
-}
-
-/* Styling the month display container */
-#month-display {
-    margin-top: 20px;
-}
-
-/* Styling the selected month text */
-#month-display p {
-    font-size: 1.5rem; /* Larger text size for the display */
-    font-weight: bold;
-    color: #333;
-}
-
 #selected-month {
-    font-size: 1.5rem; /* Larger font for the selected month */
-    color: #333; /* Blue color for the selected month */
+  font-size: 1.5rem;
+  color: #333;
 }
 
 /* Title Section (Daily Tracker Header) */
@@ -121,26 +106,24 @@ body {
   margin-bottom: 20px;
 }
 
-/* Calendar Table Styling */
+/* Calendar Table */
 .calendar {
   width: 100%;
+  margin-top: 30px;
 }
 
-/* Calendar Table Style */
 .calendar-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-/* Table Cells for Calendar */
 .calendar-table td {
   width: 14.28%; /* 7 days in a week, 100% divided by 7 */
   padding: 10px;
   text-align: center;
 }
 
-/* Calendar Buttons */
 .calendar-button {
   width: 100%;
   height: 50px;
@@ -151,52 +134,88 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-sizing: border-box; /* Ensures padding is included in button size */
 }
 
-/* Hover Effect for Buttons */
 .calendar-button:hover {
   background-color: #333;
   color: #fff;
   border-color: #5F9EA0;
 }
 
-/* Active Day Styling */
 .calendar-button.active {
   background-color: #28a745; /* Green for active days */
   color: #fff;
   border-color: #218838;
 }
 
-/* Number of Days up on Time Section */
 #active-days {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333; /* Blue color for emphasis */
+  color: #333;
   margin-top: 20px;
 }
 
-/* Optional: Adding Margin Around the Calendar Section */
-.calendar {
-  margin-top: 30px;
+/* Footer Styles */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+  padding: 20px 0;
 }
-  
-  /* Footer Styles */
-  footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    font-size: 1em;
-    padding: 20px 0;
-    margin-top: auto;
-  }
-  
-  footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  footer a:hover {
-    color: #5F9EA0;
-  }
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #5F9EA0;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.progress-bar-fill {
+  display: flex;
+  height: 100%;
+  width: 50%; /* Placeholder for progress (set dynamically via JS or other methods) */
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* Trophy Case Styles */
+.trophy-case {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.trophy-case .trophy {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.trophy-case .trophy:hover {
+  transform: scale(1.1);
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
