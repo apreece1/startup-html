@@ -3,8 +3,18 @@ html, body {
     height: 100%;              /* Ensure body takes full viewport height */
     margin: 0;                 /* Remove default margin */
     display: flex;             /* Use flexbox layout */
-    flex-direction: column;    /* Stack header, main, and footer vertically */
+    flex-direction: column; /* Stack header, main, and footer vertically */
 }
+
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Make sure body text uses Roboto */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
 
 /* Top Bar */
 header {
@@ -14,20 +24,20 @@ header {
 }
 
 header h1 {
-    padding: 20px;
+    padding: 1.25rem;
     margin: 0;
     font-size: 3em;
 }
 
 header nav ul {
     list-style: none;
-    padding: 10px;
+    padding: 0.625rem;
     margin: 0;
 }
 
 header nav ul li {
     display: inline;
-    margin: 10px;
+    margin: 0,625 rem;
 }
 
 header nav ul li a {
@@ -38,7 +48,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #5f83a0; /* Accent color when hovering */
+    color: #333; /* Accent color when hovering */
 }
 
 hr {
@@ -53,35 +63,57 @@ main {
     flex: 1;                 /* Allow main to take available space */
 }
 
-/* alarms.css */
-
-
-
-.alarm-section {
-    text-align: center;
-    margin-bottom: 20px;
-    border: 0.5px solid #ccc; /* Add a border */
-    padding: 60px; /* Add padding for space inside the box */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3)
-  }
-  
-.alarm-section button {
-  display: inline-block;
-  padding: 8px 10px;
-  border-radius: 6px; /* Adjust the radius for a square shape */
-  background-color: #5F9EA0;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
+/* Main Content Styling */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-  
-  .alarm-section button:hover {
-    background-color: #333;
-  }
-  
+
+main p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Beveled Box Styling for picture-box */
+.picture-box {
+    background-color: #ffffff;
+    border: 2px solid #5F9EA0; /* Border color */
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;  /* Make it responsive */
+    border-radius: 12px;  /* Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.4); /* Beveled effect */
+    text-align: center;
+}
+
+.picture-box #picture {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;  /* Rounded corners for the image */
+}
+
+/* Add a subtle hover effect for the picture-box */
+.picture-box:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);  /* Slight elevation effect */
+    transition: all 0.3s ease;
+}
+
+
 
 /* Footer Styles */
 footer {

@@ -38,7 +38,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #5f83a0; /* Accent color when hovering */
+    color: #333; /* Accent color when hovering */
 }
 
 hr {
@@ -47,6 +47,123 @@ hr {
 
 /*recieved*/
 
+/* Main container for the WebSocket messages */
+#websocket-placeholder {
+  background-color: #ffffff; /* White background for the placeholder */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a card-like effect */
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+  color: #333; /* Dark text for readability */
+  text-align: left;
+}
+
+/* Heading for the WebSocket section */
+#websocket-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Styling the user messages list */
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between messages */
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Styling each message in the list */
+.message-list .message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  max-width: 80%; /* Prevent the message from being too wide */
+}
+
+/* Style for the friend avatars */
+.message-list .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd; /* Default avatar color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Differentiate Friend 1 and Friend 2 with different background colors */
+.message-list .friend1 {
+  background-color: #4CAF50; /* Green for Friend 1 */
+}
+
+.message-list .friend2 {
+  background-color: #007BFF; /* Blue for Friend 2 */
+}
+
+/* Animating the new incoming messages */
+.message-list .message.new-message {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in animation for new messages */
+@keyframes slideIn {
+  0% {
+      transform: translateX(20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Optional: Loading Animation for Placeholder State */
+#websocket-placeholder .loading {
+  font-size: 1.1rem;
+  color: #999;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Optional: Add subtle pulse animation to indicate loading */
+#websocket-placeholder .loading::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #007BFF;
+  animation: pulse 1.5s infinite ease-in-out;
+  margin-right: 10px;
+}
+
+/* Pulse animation to show that something is loading */
+@keyframes pulse {
+  0% {
+      transform: scale(0.8);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.6;
+  }
+  100% {
+      transform: scale(0.8);
+      opacity: 1;
+  }
+}
 
 
 /* Message Section Styles */

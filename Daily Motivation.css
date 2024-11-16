@@ -38,7 +38,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #5f83a0; /* Accent color when hovering */
+    color: #333; /* Accent color when hovering */
 }
 
 hr {

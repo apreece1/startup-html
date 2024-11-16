@@ -3,12 +3,6 @@
 
 <link rel="stylesheet" href="Connect with Friends.css" />
 
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-  crossorigin="anonymous"
-/>
 
 <head>
   <meta charset="UTF-8" />
@@ -16,6 +10,14 @@
   <title>Connect with Friends</title>
   <link rel="icon" href="favicon.ico" />
 </head>
+
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+  crossorigin="anonymous"
+/>
 
 <body>
   <header>
@@ -37,12 +39,20 @@
 
   <main>
     <div id="websocket-placeholder">
+      <!-- Optional loading state -->
+      <div class="loading">Loading messages...</div>
+  
+      <!-- Display morning messages here -->
       <p>Morning Messages:</p>
-      <p> 👩 Friend 1: Goodmorning!<p>
-      <p> 👨 Friend 2: Goodmorning!<p>
-      <div class="message-list"></div>
+      <p>👩 Friend 1: Goodmorning!</p>
+      <p>👨 Friend 2: Goodmorning!</p>
+  
+      <!-- Message list container -->
+      <div class="message-list">
+        <!-- New messages will appear here -->
+      </div>
     </div>
-
+  </main>
 
 
     <section class="message-section">
