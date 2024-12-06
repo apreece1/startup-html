@@ -1,52 +1,37 @@
 const express = require('express');
-const http = require('http');
-const { Server } = require('socket.io');
-const axios = require('axios');
-const path = require('path');  // to handle file paths
-
 const app = express();
 
-// Create HTTP server and pass it to Socket.IO
-const server = http.createServer(app);
+// The service port.
+const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
-// Set up Socket.IO
-const io = new Server(server);
-
-// Serve static files from the 'public' folder
-app.use(express.static('public'));
-
-// JSON parsing middleware
+// JSON body parsing using built-in middleware
 app.use(express.json());
 
-// Handle WebSocket connections
-io.on('connection', (socket) => {
-  console.log('A user connected');
+// Serve static files from the public directory
+app.use(express.static('public'));
 
-  // Listen for messages from clients and broadcast them
-  socket.on('message', (msg) => {
-    console.log('Message received:', msg);
-    io.emit('message', msg); // Broadcast to all clients
-  });
+// Router for service endpoints
+var apiRouter = express.Router();
+app.use(`/api`, apiRouter);
 
-  socket.on('disconnect', () => {
-    console.log('A user disconnected');
-  });
-});
-
-// API route to fetch a daily motivational quote
-app.get('/api/motivation', async (_req, res) => {
+// Quote API: Fetch a random quote from an external source
+apiRouter.get('/quote', async (_req, res) => {
   try {
-    const response = await axios.get('https://zenquotes.io/api/random');
-    res.json(response.data[0]); // Return the first quote
-  } catch (err) {
-    res.status(500).send({ msg: 'Error fetching quote' });
+    const response = await fetch('https://type.fit/api/quotes');
+    const quotes = await response.json();
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    res.json({ quote: randomQuote.text });
+  } catch (error) {
+    console.error('Error fetching quote:', error);
+    res.status(500).send({ msg: 'Failed to fetch quote' });
   }
 });
 
-// The port for the service
-const port = process.argv.length > 2 ? process.argv[2] : 4000;
+// Default route to serve the frontend
+app.use((_req, res) => {
+  res.sendFile('index.html', { root: 'public' });
+});
 
-// Start the server on the specified port
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
