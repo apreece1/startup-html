@@ -1,0 +1,283 @@
+/* Global Styles */
+html, body {
+  height: 100%;              /* Ensure body takes full viewport height */
+  margin: 0;                 /* Remove default margin */
+  display: flex;             /* Use flexbox layout */
+  flex-direction: column;    /* Stack header, main, and footer vertically */
+  font-family: Arial, sans-serif; /* Default font */
+  color: black; /* Default text color for all elements */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1;                   /* Ensure main content takes remaining space */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  background-color: #5F9EA0; /* Teal background */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+  color: #333; /* Accent color when hovering */
+}
+
+/* Goal Setting Section */
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#goal-input {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+#goal-input:focus {
+  outline: none;
+  border-color: #5F9EA0;
+}
+
+button#set-goal {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #5F9EA0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+button#set-goal:hover {
+  background-color: #4e8a8b;
+}
+
+/* Calendar Buttons */
+.week-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.calendar-button {
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.calendar-button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #5F9EA0;
+}
+
+.calendar-button.active {
+  background-color: #28a745; /* Green for active days */
+  color: #fff;
+  border-color: #218838;
+}
+
+/* Progress Bar Styles */
+.progress {
+  margin-top: 20px;
+  height: 25px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.progress-bar-fill {
+  display: flex;
+  height: 100%;
+  width: 50%; /* Placeholder for progress (set dynamically via JS or other methods) */
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* Reward Styles */
+.reward-message {
+  margin-top: 20px;
+  color: black; /* Ensure the text for reward message is black */
+}
+
+.trophy-case {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.trophy-case .reward {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.trophy-case .reward:hover {
+  transform: scale(1.1);
+}
+
+/* Reset Week Button */
+button.btn-danger {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #f44336; /* Red background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-danger:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+  padding: 20px 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #5F9EA0;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Additional styles for month selector */
+.month-selector {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.month-selector label {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.month-selector select {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.month-selector select:hover {
+  border-color: #333;
+  background-color: #e6f7ff;
+}
+
+#month-display {
+  margin-top: 20px;
+}
+
+#month-display p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#selected-month {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Goal Set Message */
+.goal-message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333; /* Dark text color for visibility */
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+}
+
+/* Progress to Goal Text */
+.progress h3,
+.reward-message h3,
+.goal-message h3 {
+  color: black; /* Ensure text for progress, reward message, and goal message is black */
+}

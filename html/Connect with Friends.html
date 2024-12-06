@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect with Friends</title>
+    <link rel="stylesheet" href="Connect with Friends.css" />
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.5.1/dist/socket.io.min.js"></script> <!-- Import Socket.io -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Connect 😎</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Alarms.html">Alarms</a></li>
+          <li><a href="Daily Motivation.html">Daily Motivation</a></li>
+          <li><a href="Personal Stats.html">Personal Stats</a></li>
+          <li><a href="Connect with Friends.html">Connect</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <div class="message-list">
+        <!-- Incoming messages will appear here -->
+      </div>
+
+      <section class="message-section">
+        <h2>Message Friends</h2>
+
+        <section class="friend-select">
+          <br />
+          <select id="friend-select">
+            <option value="friend1">Friend 1</option>
+            <option value="friend2">Friend 2</option>
+            <option value="friend3">Friend 3</option>
+          </select>
+        </section>
+
+        <section class="message-box">
+          <textarea id="message-box" placeholder="Type your message here"></textarea>
+        </section>
+
+        <section class="button-select">
+          <button onclick="sendMessage()">Send Message</button>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <span class="text-reset">Author: Abigail Preece</span>
+      <br />
+      <a href="https://github.com/apreece1/startup-html">GitHub</a>
+    </footer>
+
+    <script>
+      // Connect to the server using Socket.io
+      const socket = io("http://localhost:3000");
+
+      // Function to send a message
+      function sendMessage() {
+        const message = document.getElementById("message-box").value;
+        const friend = document.getElementById("friend-select").value;
+
+        if (message.trim() !== "") {
+          // Emit the message to the server
+          socket.emit("sendMessage", { friend, message });
+          document.getElementById("message-box").value = ""; // Clear the message box
+        }
+      }
+
+      // Listen for incoming messages
+      socket.on("receiveMessage", (data) => {
+        const messageElement = document.createElement("p");
+        messageElement.textContent = `${data.friend} says: ${data.message}`;
+        document.querySelector(".message-list").appendChild(messageElement);
+      });
+    </script>
+  </body>
+</html>
