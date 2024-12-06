@@ -105,21 +105,35 @@ footer a:hover {
   color: #5f83a0;
 }
 
+/* Quote Section Styling */
+.blockquote p {
+  color: #333; /* Set text color to dark gray for visibility */
+  font-size: 1.5rem; /* Adjust font size for better readability */
+  font-style: italic; /* Optional: make the quote italic */
+}
+
+blockquote {
+  background-color: #f8f9fa; /* Optional: change the background of the quote block */
+  border-left: 5px solid #007bff; /* Optional: add a left border to the block */
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
 /* Specific adjustments for responsiveness and spacing */
 @media (max-width: 768px) {
   main {
-      padding: 20px;  /* Reduced padding for smaller screens */
+    padding: 20px;  /* Reduced padding for smaller screens */
   }
 
   .categories {
-      padding: 30px;  /* Adjusted padding */
+    padding: 30px;  /* Adjusted padding */
   }
 
   .categories h2 {
-      font-size: 1.5em;
+    font-size: 1.5em;
   }
 
   .categories a {
-      font-size: 1em;
+    font-size: 1em;
   }
 }
