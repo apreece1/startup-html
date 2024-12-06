@@ -73,3 +73,17 @@ React App Structure Recap:
 The app is structured with several functional components organized into folders under src (e.g., login, alarms, daily-motivation, etc.).
 Dynamic Routing: The app uses react-router-dom for seamless navigation between pages like Login, Alarms, Daily Motivation, etc.
 State Management: The useState hook manages dynamic content such as the username, and updates are stored in the local storage.
+
+
+
+12/6 
+
+Axios for API Calls: I switched from using fetch to axios in the React component to handle the HTTP requests, which offers additional features like automatic JSON parsing and easier error handling.
+
+Express API Setup: I set up an Express API to fetch data from a third-party service (ZenQuotes API) and serve it to the frontend. The Express server was configured to route requests through axios to ZenQuotes.
+
+Error Handling: I learned the importance of handling errors in API calls and how to show helpful messages to the user when something goes wrong, such as when the server returns a 500 error.
+
+Asynchronous Operations: I saw how to use async/await with axios for asynchronous API calls. This allows the UI to remain responsive while waiting for the data.
+
+CORS Issues: I encountered and learned about CORS issues that arise when making API calls from a client-side application to a different domain, and how to manage them by setting up the server to handle CORS properly.
