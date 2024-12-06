@@ -43,6 +43,7 @@ function App() {
         <footer className="bg-dark text-white-50">
           <div className="container text-center">
             <p>&copy; Author: Abigail Preece</p>
+            <p><a href="https://github.com/apreece1/startup-html.git">GitHub Repository</a></p>
           </div>
         </footer>
       </div>

@@ -41,6 +41,18 @@ footer {
   padding: 10px 0; /* Add padding to footer */
   margin-top: 20px; /* Add margin above footer */
   border-radius: 0 0 10px 10px; /* Round the bottom corners */
+  text-align: center; /* Center the content */
+}
+
+footer p {
+  margin: 5px 0; /* Reduce margin for better spacing */
+}
+
+footer a {
+  color: white;
+  text-decoration: none; /* Remove underline from the link */
+  margin-top: 5px;
+  display: block; /* Ensure link appears below the author text */
 }
 
 menu {
@@ -58,10 +70,6 @@ menu {
 
 menu .nav-item {
   padding: 0 0.3em;
-}
-
-footer a {
-  float: right;
 }
 
 @media (max-height: 600px) {
