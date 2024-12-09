@@ -1,10 +1,10 @@
 /* Global Styles */
 html, body {
-    height: 100%;              /* Ensure body takes full viewport height */
+    height: 100%;              /* Full viewport height for consistent layout */
     margin: 0;                 /* Remove default margin */
-    display: flex;             /* Use flexbox layout */
-    flex-direction: column;    /* Stack main content vertically */
-    background-color: white;   /* Set background color to white */
+    display: flex;             /* Flexbox layout for vertical alignment */
+    flex-direction: column;    /* Stack content vertically */
+    background-color: white;   /* White background for a clean look */
 }
 
 /* Main Content */
@@ -12,35 +12,45 @@ main {
     padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    flex: 1;                   /* Allow main to take available space */
+    flex: 1;                   /* Let main content fill available space */
+    display: flex;             /* Flexbox for centering content */
+    flex-direction: column;
+    align-items: center;       /* Center align all child elements */
+    justify-content: center;   /* Vertically center the content */
 }
 
-/* Welcome Section (Login Form) */
+/* Section Styles */
 section {
-    margin-top: 5px;  /* Increased space between content and form */
-    text-align: center; /* Center the welcome text */
-    padding-top: 0px;  /* Added more padding on top to push the title down */
+    margin-top: 5px;           /* Space between top content and form */
+    text-align: center;        /* Center-align section text */
 }
 
 h1 {
-    font-size: 2.5em;  /* Larger font size for the title */
-    color: #5F9EA0;    /* Teal color for the title */
-    margin-bottom: 70px; /* Increased space between title and form */
+    font-size: 2.5em;          /* Larger title font size */
+    color: #5F9EA0;            /* Teal color for titles */
+    margin-bottom: 70px;       /* Space between title and other content */
 }
 
+/* Authenticated Section */
+.authenticated {
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #e0f7fa; /* Light teal for authenticated background */
+    border-radius: 10px;
+}
 
 /* Login Form */
 form {
     margin-top: 40px;
-    padding-top: 10px;
     max-width: 400px;
-    background-color: #f9f9f9;  /* Light background for the form */
+    background-color: #f9f9f9; /* Light background for the form */
     padding: 40px;
-    border-radius: 10px; /* Rounded corners for the form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin-bottom: 40px;
+    border-radius: 10px;       /* Rounded form corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Form Inputs */
 form div {
     margin-bottom: 15px;
 }
@@ -48,7 +58,7 @@ form div {
 form label {
     font-weight: bold;
     display: block;
-    color: #333; /* Dark color for labels */
+    color: #333;               /* Darker labels for clarity */
 }
 
 form input[type="email"],
@@ -57,23 +67,24 @@ form input[type="password"] {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px; /* Slightly more rounded corners */
+    border-radius: 5px;        /* Smooth corners for input fields */
     font-size: 1em;
-    background-color: #f9f9f9; /* Light background for inputs */
+    background-color: #f9f9f9; /* Light gray input background */
 }
 
 form input[type="email"]:focus,
 form input[type="password"]:focus {
-    border-color: #00bcd4; /* Highlight color for focus */
+    border-color: #00bcd4;     /* Highlight border on focus */
     outline: none;
 }
 
+/* Buttons */
 form button {
-    background-color: #5F9EA0; /* Teal button */
+    background-color: #5F9EA0; /* Teal for buttons */
     color: white;
-    padding: 12px 20px;  /* Added some padding */
+    padding: 12px 20px;
     border: none;
-    border-radius: 5px;  /* Rounded corners for buttons */
+    border-radius: 5px;        /* Rounded button corners */
     font-size: 1.1em;
     cursor: pointer;
     width: 100%;
@@ -81,10 +92,9 @@ form button {
 
 form button[type="submit"]:hover,
 form button[type="button"]:hover {
-    background-color: #333; /* Darker teal on hover */
+    background-color: #333;    /* Darker teal on hover */
 }
 
 form button[type="button"] {
-    background-color: #5F9EA0; /* Teal for 'Create' button */
-    margin-top: 10px;
+    margin-top: 10px;          /* Space between buttons */
 }

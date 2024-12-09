@@ -19,6 +19,27 @@
 // }
 
 // testConnection();
+// const { MongoClient } = require('mongodb');
+// const dbConfig = require('./dbConfig.json');
+
+// async function testConnection() {
+//   const client = new MongoClient(dbConfig.url, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   });
+
+//   try {
+//     await client.connect();
+//     const db = client.db(dbConfig.startup); // Use the database name
+//     console.log(`Connected to MongoDB database: ${dbConfig.startup}`);
+//   } catch (error) {
+//     console.error('MongoDB Connection Error:', error);
+//   } finally {
+//     await client.close();
+//   }
+// }
+
+// testConnection();
 
 const { MongoClient } = require('mongodb');
 const bcrypt = require('bcrypt');
