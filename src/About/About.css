@@ -1,67 +1,22 @@
+/* Global styling */
 html, body {
-    height: 100%;              /* Ensure body takes full viewport height */
-    margin: 0;                 /* Remove default margin */
-    display: flex;             /* Use flexbox layout */
-    flex-direction: column;    /* Stack header, main, and footer vertically */
+    height: 100%;               /* Ensure body takes full viewport height */
+    margin: 0;                  /* Remove default margin */
+    display: flex;              /* Use flexbox layout */
+    flex-direction: column;     /* Stack header, main, and footer vertically */
     font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-}
-
-
-/* Top Bar */
-header {
-    background-color: #5F9EA0; /* Teal background */
-    color: white;
-    text-align: center;
-}
-
-header h1 {
-    padding: 20px;
-    margin: 0;
-    font-size: 3em;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-header nav ul li a:hover {
-    color: #333; /* Accent color when hovering */
-}
-
-hr {
-    display: none;  /* Hide hr tags to remove unwanted lines */
+    background-color: #f4f4f6;  /* Set a light background color for the page */
 }
 
 /* Main Content */
 main {
-    padding: 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex: 1;                 /* Allow main to take available space */
-}
-
-/* Main Content Styling */
-main {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: white;
+    background-color: black;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: black; /* Ensure text in the main content is white */
 }
 
 main p {
@@ -103,8 +58,6 @@ main p {
     transform: translateY(-2px);  /* Slight elevation effect */
     transition: all 0.3s ease;
 }
-
-
 
 /* Footer Styles */
 footer {

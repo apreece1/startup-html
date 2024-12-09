@@ -5,6 +5,7 @@ import { Alarms } from './Alarms/Alarms';
 import { DailyMotivation } from './Daily Motivation/DailyMotivation';
 import { PersonalStats } from './Personal Stats/PersonalStats';
 import { Connect } from './Connect/Connect';
+import { About } from './About/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; // Main app styles
 
@@ -27,6 +28,7 @@ function App() {
               <NavLink className="nav-link" to="/daily-motivation">Daily Motivation</NavLink>
               <NavLink className="nav-link" to="/personal-stats">Personal Stats</NavLink>
               <NavLink className="nav-link" to="/connect">Connect</NavLink>
+              <NavLink className="nav-link" to="/about">About</NavLink>
             </div>
           </nav>
         </header>
@@ -37,6 +39,7 @@ function App() {
           <Route path="/daily-motivation" element={<DailyMotivation />} />
           <Route path="/personal-stats" element={<PersonalStats />} />
           <Route path="/connect" element={<Connect />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
